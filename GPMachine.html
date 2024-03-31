@@ -184,6 +184,8 @@
 </html>
 
 <script>
+
+    //FUNÇÕES PARA RESTRINGIR CARACTÉRES NOS INPUTS//
     function type_decimal(e) {
 
         let tecla = (window.event) ? event.keyCode : e.which
@@ -235,14 +237,14 @@
 
 
     }
+    //FIM DAS FUNÇÕES//
 
 
 
 
 
 
-
-    //Função para converter os números em Decimal para N//
+    //FUNÇÃO PARA CONVERTER NÚMEROS EM DECIMAL PARA N//
     function ConverterDecimal() {
 
         let base = select_decimal.value
@@ -279,7 +281,7 @@
 
 
     }
-
+    //FUNÇÃO PARA CONVERTER NÚMEROS DE OCTAL PARA N//
     function ConverterOctal() {
 
         let base = select_octal.value
@@ -316,6 +318,7 @@
 
     }
 
+    //FUNÇÃO PARA CONVERTER NÚMEROS DE HEXADECIMAL PARA N//
     function ConverterHexa() {
 
         let base = select_hexa.value
@@ -351,6 +354,7 @@
 
     }
 
+    //FUNÇÃO PARA CONVERTER NÚMREOS DE BINÁRIO PARA N//
     function ConverterBinario() {
 
         let base = select_binario.value
@@ -388,7 +392,7 @@
 
 
     }
-
+  
 
 
 </script>
