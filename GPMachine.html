@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GP Machine's</title>
+    <link rel="stylesheet" href="GPMachine.css">
+</head>
+
+<body>
+    <div class="div_titulo">
+        <h1 class="titulo">
+            GP Machine's - Converter
+        </h1>
+    </div>
+    <main class="container_converter">
+
+
+        <!-- Div para a conversão de números em Decimal para N -->
+        <div class="div_decimal">
+            <h3>
+                Decimal
+            </h3>
+
+            <h4>
+                Conversão de Decimal para:
+            </h4>
+
+            <select id="select_decimal">
+
+                <option value="8">Octal</option>
+
+                <option value="16">Hexadecimal</option>
+
+                <option value="2">Binário</option>
+
+            </select>
+
+            <br><br>
+
+            <label for="input_decimal">Informe o número que quer converter
+
+            </label>
+            <br>
+            <input placeholder="Número em Decimal" id="input_decimal" onkeypress="return type_decimal(event)">
+
+            <br><br>
+
+            <button onclick="ConverterDecimal()">Converter</button>
+
+            <br><br>
+
+            <div id="div_resultado_decimal"></div>
+
+        </div>
+
+        <!-- Div para a conversão de números em Octal para N -->
+        <div class="div_octal">
+            <h3>
+                Octal
+            </h3>
+
+            <h4>
+                Conversão de Octal para:
+            </h4>
+
+
+            <select id="select_octal">
+
+                <option value="10">Decimal</option>
+
+                <option value="16">Hexadecimal</option>
+
+                <option value="2">Binário</option>
+
+            </select>
+
+            <br><br>
+
+            <label for="input_octal">Informe o número que quer converter
+
+            </label>
+            <br>
+            <input placeholder="Número em Octal" id="input_octal" onkeypress="return type_octal(event)">
+
+            <br><br>
+
+            <button onclick="ConverterOctal()">Converter
+            </button>
+
+            <br><br>
+
+            <div id="div_resultado_octal"></div>
+
+        </div>
+
+        <!-- Div para conversão de números em Hexadecimal para N -->
+        <div class="div_hexa">
+            <h3>
+                Hexadecimal
+            </h3>
+
+            <h4>
+                Conversão de Hexadecimal para:
+            </h4>
+
+            <select id="select_hexa">
+
+                <option value="10">Decimal</option>
+
+                <option value="8">Octal</option>
+
+                <option value="2">Binário</option>
+
+            </select>
+
+            <br><br>
+
+            <label for="input_hexa">Informe o número que quer converter
+
+            </label>
+            <br>
+            <input placeholder="Número em Hexadecimal" id="input_hexa" onkeypress="return type_hexa(event)">
+
+            <br><br>
+
+            <button onclick="ConverterHexa()">Converter
+            </button>
+
+            <br><br>
+
+            <div id="div_resultado_hexa">
+
+                <p>sjnivdoa</p>
+            </div>
+
+        </div>
+
+        <!-- Div para a conversão de números em Binário para N -->
+        <div class="div_binario">
+            <h3>
+                Binário
+            </h3>
+
+            <h4>
+                Conversão de Binário para:
+            </h4>
+
+            <select id="select_binario">
+
+                <option value="10">Decimal</option>
+
+                <option value="16">Hexadecimal</option>
+
+                <option value="8">Octal</option>
+
+            </select>
+
+            <br><br>
+
+            <label for="input_binario">Informe o número que quer converter
+
+            </label>
+            <br>
+            <input placeholder="Número em Binário" id="input_binario" onkeypress="return type_binario(event)">
+
+            <br><br>
+
+            <button onclick="ConverterBinario()">Converter
+            </button>
+
+            <br><br>
+
+            <div id="div_resultado_binario">
+
+                <p>sjnivdoa</p>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
+
+<script>
+    function type_decimal(e) {
+
+        let tecla = (window.event) ? event.keyCode : e.which
+
+        if (tecla >= 48 && tecla <= 57) return true;
+        else {
+            return false
+        }
+
+    }
+
+    function type_octal(e) {
+
+        let tecla = (window.event) ? event.keyCode : e.which
+
+        if (tecla >= 48 && tecla <= 55) return true;
+        else {
+            return false
+        }
+
+
+
+
+    }
+
+    function type_hexa(e) {
+
+        let tecla = (window.event) ? event.keyCode : e.which
+
+        if (tecla >= 48 && tecla <= 57 || tecla >= 65 && tecla <= 70 || tecla >= 97 && tecla <= 102)
+            return true;
+        else {
+            return false
+        }
+
+
+    }
+
+    function type_binario(e) {
+
+        let tecla = (window.event) ? event.keyCode : e.which
+
+        if (tecla == 48 || tecla == 49) return true;
+        else {
+            return false
+        }
+
+
+
+
+    }
+
+
+
+
+
+
+
+    //Função para converter os números em Decimal para N//
+    function ConverterDecimal() {
+
+        let base = select_decimal.value
+
+        let decimal = parseInt(document.getElementById('input_decimal').value, 10);
+
+        let octal = decimal.toString(8);
+
+        let hexadecimal = decimal.toString(16);
+
+        let binario = decimal.toString(2);
+
+
+        if (base == 8) {
+            div_resultado_decimal.style.display = 'block'
+            document.getElementById("div_resultado_decimal").innerHTML = ` ${octal}`;
+
+        }
+
+        if (base == 16) {
+            div_resultado_decimal.style.display = 'block'
+            document.getElementById("div_resultado_decimal").innerHTML = ` ${hexadecimal.toUpperCase()}`;
+
+
+
+        }
+
+        if (base == 2) {
+            div_resultado_decimal.style.display = 'block'
+            document.getElementById("div_resultado_decimal").innerHTML = ` ${binario}`;
+
+        }
+
+
+
+    }
+
+    function ConverterOctal() {
+
+        let base = select_octal.value
+
+        let octal = parseInt(document.getElementById('input_octal').value, 10)
+
+        let decimal = parseInt(octal, 8);
+
+        let hexadecimal = parseInt(octal, 8).toString(16);
+
+        let binario = parseInt(octal, 8).toString(2);
+
+
+        if (base == 10) {
+            div_resultado_octal.style.display = 'block'
+            document.getElementById("div_resultado_octal").innerHTML = ` ${decimal}`;
+
+        }
+
+        if (base == 16) {
+            div_resultado_octal.style.display = 'block'
+            document.getElementById("div_resultado_octal").innerHTML = ` ${hexadecimal.toUpperCase()}`;
+
+
+
+        }
+
+        if (base == 2) {
+            div_resultado_octal.style.display = 'block'
+            document.getElementById("div_resultado_octal").innerHTML = ` ${binario}`;
+
+        }
+
+
+    }
+
+    function ConverterHexa() {
+
+        let base = select_hexa.value
+
+        let hexa = document.getElementById('input_hexa').value
+
+        let decimal = parseInt(hexa, 16);
+
+        let octal = parseInt(hexa, 16).toString(8);
+
+        let binario = parseInt(hexa, 16).toString(2);
+
+
+        if (base == 10) {
+            div_resultado_hexa.style.display = 'block'
+            document.getElementById("div_resultado_hexa").innerHTML = ` ${decimal}`;
+
+        }
+
+        if (base == 8) {
+            div_resultado_hexa.style.display = 'block'
+            document.getElementById("div_resultado_hexa").innerHTML = ` ${octal}`;
+
+
+
+        }
+
+        if (base == 2) {
+            div_resultado_hexa.style.display = 'block'
+            document.getElementById("div_resultado_hexa").innerHTML = ` ${binario}`;
+
+        }
+
+    }
+
+    function ConverterBinario() {
+
+        let base = select_binario.value
+
+        let binario = parseInt(document.getElementById('input_binario').value, 10)
+
+        let decimal = parseInt(binario, 2);
+
+        let hexadecimal = parseInt(binario, 2).toString(16);
+
+        let octal = parseInt(binario, 2).toString(8);
+
+
+        if (base == 10) {
+            div_resultado_binario.style.display = 'block'
+            document.getElementById("div_resultado_binario").innerHTML = ` ${decimal}`;
+
+        }
+
+        if (base == 16) {
+            div_resultado_binario.style.display = 'block'
+            document.getElementById("div_resultado_binario").innerHTML = ` ${hexadecimal.toUpperCase()}`;
+
+
+
+        }
+
+        if (base == 8) {
+            div_resultado_binario.style.display = 'block'
+            document.getElementById("div_resultado_binario").innerHTML = ` ${octal}`;
+
+        }
+
+
+
+
+    }
+
+
+
+</script>

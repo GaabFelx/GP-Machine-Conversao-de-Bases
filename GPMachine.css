@@ -1,0 +1,136 @@
+body {
+    background-color: darkslategray;
+
+}
+
+.div_titulo {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(107, 147, 148);
+    height: 100px;
+    border-radius: 5px
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    color: #FFFF;
+    font-weight: bold;
+
+}
+
+.container_converter {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.div_decimal {
+    background-color: rgb(107, 147, 148);
+    width: 300px;
+    height: 400px;
+    box-shadow: 0px 20px 50px 0px rgb(13, 41, 41);
+    border: 10px;
+    border-radius: 5px;
+    color: #FFFF;
+    font-weight: bold;
+
+
+}
+
+.div_octal {
+    background-color: rgb(107, 147, 148);
+    width: 300px;
+    height: 400px;
+    box-shadow: 0px 20px 50px 0px rgb(0, 0, 0.80);
+    border: 10px;
+    border-radius: 5px;
+    color: #FFFF;
+    font-weight: bold;
+
+
+}
+
+
+.div_hexa {
+    background-color: rgb(107, 147, 148);
+    width: 300px;
+    height: 400px;
+    box-shadow: 0px 20px 50px 0px rgb(0, 0, 0.80);
+    border: 10px;
+    border-radius: 5px;
+    color: #FFFF;
+    font-weight: bold;
+
+}
+
+
+.div_binario {
+    background-color: rgb(107, 147, 148);
+    width: 300px;
+    height: 400px;
+    box-shadow: 0px 20px 50px 0px rgb(0, 0, 0.80);
+    border: 10px;
+    border-radius: 5px;
+    color: #FFFF;
+    font-weight: bold;
+
+}
+
+button {
+    background-color: darkslategray;
+    border-radius: 5px;
+    color: #FFFF;
+}
+
+button:hover {
+    background-color: #39424b;
+
+}
+
+#div_resultado_decimal {
+    background-color: darkslategray;
+    color: #FFFF;
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    display: none;
+
+
+}
+
+#div_resultado_octal{
+    background-color: darkslategray;
+    color: #FFFF;
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    display: none;
+
+}
+
+#div_resultado_hexa{
+    background-color: darkslategray;
+    color: #FFFF;
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    display: none;
+
+}
+
+#div_resultado_binario{
+    background-color: darkslategray;
+    color: #FFFF;
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    display: none;
+
+}
